@@ -1,2 +1,2 @@
 # GemmaTranslate-Core
-Google Gemma 기반 translategemma 모델의 VRAM 최적화 및 4-bit 양자화 추론 엔진.
+High-performance VRAM optimization and 4-bit quantization engine for the translategemma model on Ollama.
