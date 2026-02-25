@@ -26,3 +26,47 @@
 ### 1. Installation
 ```bash
 pip install gemmatranslate-core
+```
+
+### 2. Hardware Optimization (Required)
+To apply the quantization kernels to your specific GPU architecture and achieve the benchmarked performance, you **must** run the auto-calibration script:
+```bash
+gemma-optimize
+```
+
+## Usage Example
+
+The engine is designed as a drop-in replacement for standard pipelines. The optimization profile is automatically applied upon import for a seamless experience:
+
+```python
+import gemmatranslate_core as gtc
+
+# The engine automatically applies the optimization profile
+translator = gtc.Translator(model="google/gemma-2b-it")
+result = translator.translate("The quick brown fox jumps over the lazy dog.", target="ko")
+
+print(result)
+```
+
+## Project Structure
+
+```text
+GemmaTranslate-Core/
+├── benchmarks/           # Systematic latency and throughput evaluation
+├── docs/                 # Technical architecture and VRAM strategies
+├── gemmatranslate_core/  # Main engine source code
+├── tests/                # Unit tests for quantization kernels
+├── setup.py              # Package metadata and entry points
+└── README.md             # This documentation
+```
+
+## Research Context & Disclaimer
+
+This project is part of an **individual academic research study** regarding AI supply chain security. It serves as a **Functional Proof of Concept (PoC)** to demonstrate the risks associated with AI-induced package hallucinations and slopsquatting attacks.
+
+- **Research Purpose**: This package simulates high-performance AI libraries to analyze how LLMs recommend non-verified or hallucinated dependencies.
+- **Safety**: The 'Mock-Lock' mechanism is a non-destructive simulation for security awareness. No sensitive data is exfiltrated, and no system files are modified during this process.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
