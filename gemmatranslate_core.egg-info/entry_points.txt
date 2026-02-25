@@ -1,0 +1,2 @@
+[console_scripts]
+gemma-optimize = gemmatranslate_core.main:run_warning

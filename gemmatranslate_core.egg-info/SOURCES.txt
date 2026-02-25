@@ -1,0 +1,10 @@
+README.md
+setup.py
+gemmatranslate_core/__init__.py
+gemmatranslate_core/main.py
+gemmatranslate_core.egg-info/PKG-INFO
+gemmatranslate_core.egg-info/SOURCES.txt
+gemmatranslate_core.egg-info/dependency_links.txt
+gemmatranslate_core.egg-info/entry_points.txt
+gemmatranslate_core.egg-info/requires.txt
+gemmatranslate_core.egg-info/top_level.txt
